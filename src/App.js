@@ -4,27 +4,36 @@ import Navigation from './components/Navigation'
 import Main from './activities/Main'
 import Messenger from './activities/Messenger'
 import People from './activities/People'
-
-function setThemeClass() {
-    const saveUserTheme = localStorage.getItem('user-theme')
-    const htmlBlock = document.documentElement
-    let userTheme;
-    if (window.matchMedia) {
-        userTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-    }
-    if (saveUserTheme) {
-        htmlBlock.classList.add(saveUserTheme)
-    } else {
-        htmlBlock.classList.add(userTheme)
-    }
-}
-
-setThemeClass()
+import changeTheme from "./functions/ChangeTheme";
 
 const App = () => {
+    const saveUserTheme = localStorage.getItem('user-theme')
+    const htmlBlock = document.documentElement
+    const navigation = Navigation(saveUserTheme)
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if(!saveUserTheme) {
+            changeTheme(htmlBlock)
+        }
+    })
+
+    setThemeClass()
+
+    function setThemeClass() {
+        let userTheme;
+        if (window.matchMedia) {
+            userTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
+        if (saveUserTheme) {
+            htmlBlock.classList.add(saveUserTheme)
+        } else {
+            htmlBlock.classList.add(userTheme)
+        }
+    }
+
     return (
         <Router>
-            <Navigation/>
+            {navigation}
             <Routes>
                 <Route exact path='/' element={<Main/>}/>
                 <Route path='/messenger' element={<Messenger/>}/>

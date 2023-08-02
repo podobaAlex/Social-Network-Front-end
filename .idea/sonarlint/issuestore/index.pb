@@ -1,6 +1,4 @@
 
-?
-src/App.test.js,9\2\923703ced91ac38943d37930d9d27a7ebe8f01ad
 D
 public/manifest.json,4\2\42e89cd2213b9d5dfae4f63522702c623170d792
 A
