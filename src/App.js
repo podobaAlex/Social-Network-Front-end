@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import './static/css/App.css';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Navigation from './components/Navigation'
+import Main from './activities/Main'
+import Messenger from './activities/Messenger'
+import People from './activities/People'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function setThemeClass() {
+    const saveUserTheme = localStorage.getItem('user-theme')
+    const htmlBlock = document.documentElement
+    let userTheme;
+    if (window.matchMedia) {
+        userTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    }
+    if (saveUserTheme) {
+        htmlBlock.classList.add(saveUserTheme)
+    } else {
+        htmlBlock.classList.add(userTheme)
+    }
+}
+
+setThemeClass()
+
+const App = () => {
+    return (
+        <Router>
+            <Navigation/>
+            <Routes>
+                <Route exact path='/' element={<Main/>}/>
+                <Route path='/messenger' element={<Messenger/>}/>
+                <Route path='/people' element={<People/>}/>
+            </Routes>
+        </Router>
+    )
 }
 
 export default App;

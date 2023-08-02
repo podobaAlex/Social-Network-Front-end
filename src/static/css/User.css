@@ -1,0 +1,99 @@
+.user {
+  margin: 5px 0 0 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  border: black solid 1px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.user:first-child {
+  margin-top: 0;
+}
+.user__image {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin-right: 10px;
+}
+.user__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user__image svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user__info {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.user__action {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-left: 1px solid black;
+}
+.user__button {
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  height: 50%;
+  width: 50px;
+  border: 0 rgba(0, 0, 0, 0) solid;
+}
+.user__button:hover {
+  background-color: #d5d5d5;
+}
+.user__button_add {
+  border-bottom: 1px solid black;
+}
+.user__button_message {
+  border-top: 1px solid black;
+}
+.user__button img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user__button svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 650px) {
+  .user {
+    height: 50px;
+  }
+  .user__button {
+    width: 25px;
+  }
+  .user__image {
+    width: 25px;
+    height: 25px;
+  }
+  .user__name {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=User.css.map */

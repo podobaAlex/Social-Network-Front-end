@@ -1,0 +1,110 @@
+.user {
+  margin: 5px 0 0 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  border: black solid 1px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &__image {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    margin-right: 10px;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    & svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border-left: 1px solid black;
+  }
+
+  &__button {
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    height: 50%;
+    width: 50px;
+    border: 0 rgba(0, 0, 0, 0) solid;
+
+    &:hover {
+      background-color: #d5d5d5;
+    }
+
+    &_add {
+      border-bottom: 1px solid black;
+    }
+
+    &_message {
+      border-top: 1px solid black;
+    }
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    & svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .user {
+    height: 50px;
+
+    &__button {
+      width: 25px;
+    }
+
+    &__image {
+      width: 25px;
+      height: 25px;
+    }
+
+    &__name {
+      font-size: 1rem;
+    }
+  }
+}

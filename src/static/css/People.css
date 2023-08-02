@@ -1,0 +1,19 @@
+.users__search {
+  box-sizing: border-box;
+  width: 100%;
+  border: black solid 1px;
+  height: 1.5rem;
+  max-height: 1.5rem;
+  overflow: hidden;
+}
+
+.users {
+  width: 100%;
+  box-sizing: border-box;
+  border: black solid 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(100% - 1.5rem);
+}
+
+/*# sourceMappingURL=People.css.map */
