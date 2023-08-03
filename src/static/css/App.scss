@@ -30,18 +30,22 @@
   fill: rgba(0, 0, 0, 0);
 }
 
-html.dark *::-webkit-scrollbar-thumb {
-  background-color: #151515;
-}
-html.dark .icon {
-  stroke: white;
+html.dark {
+  *::-webkit-scrollbar-thumb {
+    background-color: #151515;
+  }
+
+  & .icon {
+    stroke: white;
+  }
 }
 
-html.light *::-webkit-scrollbar-thumb {
-  background-color: #9b9b9b;
-}
-html.light .icon {
-  stroke: black;
-}
+html.light {
+  & *::-webkit-scrollbar-thumb {
+    background-color: #9b9b9b;
+  }
 
-/*# sourceMappingURL=App.css.map */
+  & .icon {
+    stroke: black;
+  }
+}

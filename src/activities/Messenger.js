@@ -1,7 +1,8 @@
 import '../static/css/Messenger.css'
-import Dialog from '../components/Dialog'
 import React, {useEffect} from 'react';
+import Dialog from '../components/Dialog'
 import Message from '../components/Message'
+import InputMessage from '../components/InputMessage'
 
 const Messenger = () => {
     useEffect(getDialogs, [])
@@ -79,7 +80,7 @@ const Messenger = () => {
                     <span className="messenger__text">Text</span>
                 </div>
                 <div className="messenger__block" hidden>{messageList}</div>
-                <div className="messenger__input" contentEditable="true" hidden></div>
+                <InputMessage/>
             </div>
         </div>
     </div>)

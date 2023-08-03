@@ -25,16 +25,12 @@ M
 src/static/css/People.css.map,6\1\612a888b4e9035f5aa2e9fe8a9a806315a5dd8aa
 J
 src/static/css/People.scss,7\8\781946d7852f4736889c51925c59006c469250b0
-M
-src/static/img/add-friend.svg,0\e\0e33d5b379d71ae922df5c50052e4237597ab3cd
 G
 src/static/img/logo.svg,c\0\c08816920d142238dad896d89f6caf46e6b68722
 G
 src/static/img/main.svg,3\c\3ceacc5c0a180593e81411a28fc5dcbef6f49712
 L
 src/static/img/messenger.svg,a\0\a03c67b2f97c45e6335053f58bb27b22cf57ea4d
-I
-src/static/img/people.svg,9\f\9f60ce3506a753a26ccbcbf348442bafabf2b080
 ?
 src/App.test.js,9\2\923703ced91ac38943d37930d9d27a7ebe8f01ad
 <

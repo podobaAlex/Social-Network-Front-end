@@ -17,9 +17,8 @@ button {
 
 .dialog__search {
   height: 1.5rem;
+  line-height: 1.5rem;
   width: 100%;
-  align-content: center;
-  justify-self: center;
   overflow-y: hidden;
   overflow-x: auto;
   border: 1px black solid;
@@ -46,23 +45,11 @@ button {
   overflow-y: auto;
   overflow-x: hidden;
 }
-.messenger__input {
-  border: 1px solid black;
-  max-height: 3rem;
-  min-height: 1.5rem;
-  font-size: 1rem;
-  overflow-y: auto;
-  word-break: break-word;
-}
 
 .wrapper._active .messenger__block {
   visibility: visible;
   display: flex;
   flex-direction: column;
-}
-.wrapper._active .messenger__input {
-  visibility: visible;
-  display: block;
 }
 
 @media (max-width: 650px) {
@@ -81,7 +68,6 @@ button {
     width: 0;
   }
   .wrapper._active .messenger__name {
-    background-color: #dadada;
     height: 1rem;
     padding: 5px;
     border-bottom-right-radius: 8px;
@@ -96,11 +82,25 @@ button {
   flex: 0 0 auto;
   background-color: rgba(0, 0, 0, 0);
   border: 0 solid black;
+  cursor: pointer;
 }
 
 .messenger__text {
   flex: 0 0 auto;
   font-size: 1rem;
+  line-height: 1rem;
+  text-align: center;
+}
+
+html.dark .button_close {
+  color: white;
+}
+html.dark .messenger__name {
+  background-color: #151515;
+}
+
+html.light .messenger__name {
+  background-color: #dadada;
 }
 
 /*# sourceMappingURL=Messenger.css.map */
