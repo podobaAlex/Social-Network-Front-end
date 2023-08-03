@@ -17,16 +17,12 @@ A
 package-lock.json,f\a\fa288d1472d29beccb489a676f68739ad365fc47
 w
 G.idea/sonarlint/issuestore/f/4/f43ecdf8d666ee908aacce037b4cd72159e4741b,b\a\baeba705d3c6511fc7799f84dc32bf62a8b83538
-G
-src/static/css/Main.css,5\0\50764a77dc6623e8ed85044faf1f81d59609bead
 K
 src/static/css/Main.css.map,2\0\20706237d8b72809a69593e725064d14d57d86b5
 I
 src/static/css/People.css,d\a\dafce5b086112577052aa23558ca5261db8c7383
 M
 src/static/css/People.css.map,6\1\612a888b4e9035f5aa2e9fe8a9a806315a5dd8aa
-H
-src/static/css/Main.scss,c\7\c7aa8d514b9b6e92372c179aac100839ab6222eb
 J
 src/static/css/People.scss,7\8\781946d7852f4736889c51925c59006c469250b0
 M
@@ -39,8 +35,6 @@ L
 src/static/img/messenger.svg,a\0\a03c67b2f97c45e6335053f58bb27b22cf57ea4d
 I
 src/static/img/people.svg,9\f\9f60ce3506a753a26ccbcbf348442bafabf2b080
-J
-src/static/img/profile.svg,5\d\5db9e49d179b1c62a9bfdbeca11398dab8ed4965
 ?
 src/App.test.js,9\2\923703ced91ac38943d37930d9d27a7ebe8f01ad
 <
@@ -48,7 +42,5 @@ J
 :
 
 src/App.js,1\e\1e43fa63aecd2127be034b3fb9d4caa172275714
-F
-src/activities/Main.js,5\3\536f8f356381b930b717c4cea771cefc7e650b2b
 L
 src/functions/ChangeTheme.js,4\6\46fdc507d823ab19d3d48062400cc7b771fe24d1

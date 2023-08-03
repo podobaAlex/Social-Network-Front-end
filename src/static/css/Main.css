@@ -16,7 +16,7 @@
   box-sizing: border-box;
   border-radius: 5px;
 }
-.profile__image img {
+.profile__image img, .profile__image svg {
   position: absolute;
   top: 0;
   left: 0;

@@ -1,5 +1,7 @@
 import profile from "../static/img/profile.svg";
 import "../static/css/Main.css"
+import {HandySvg} from "handy-svg";
+import pixel from "../static/img/1x1.png"
 
 const Main = () => {
     return (
@@ -7,7 +9,8 @@ const Main = () => {
             <div className="container container_main _client">
                 <div className="profile">
                     <div className="profile__image">
-                        <img src={profile} alt=""/>
+                        <HandySvg src={profile} className="icon"/>
+                        <img src={pixel} alt=""/>
                     </div>
                     <div className="profile__description">
                         <div className="profile__username">Username: <span className="username">Name</span></div>
