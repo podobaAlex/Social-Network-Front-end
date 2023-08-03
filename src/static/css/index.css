@@ -24,3 +24,8 @@ code {
 svg[aria-hidden] {
   display: none;
 }
+
+html.dark {
+  background-color: #222222;
+  color: white;
+}

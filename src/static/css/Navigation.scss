@@ -44,6 +44,7 @@
   height: 7vh;
   box-sizing: border-box;
   width: 14vh;
+  transition: color 0.3s ease 0s;
   &__button {
     position: relative;
     height: 6vh;
@@ -74,6 +75,12 @@ html {
   }
 
   &.dark {
+    & .header__link {
+      &:hover {
+        background-color: #333333;
+      }
+    }
+
     & .theme {
       background: #1b253f;
       border: 1px solid #11192e;

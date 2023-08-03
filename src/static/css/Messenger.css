@@ -80,23 +80,6 @@ button {
   overflow-y: auto;
   overflow-x: hidden;
 }
-.messenger__message {
-  flex: 0 0 auto;
-  max-width: 40%;
-  word-break: break-word;
-  background-color: #dadada;
-  align-self: flex-start;
-  padding: 5px;
-  border-bottom-right-radius: 8px;
-  border-top-right-radius: 8px;
-  border-top-left-radius: 8px;
-}
-.messenger__message._client {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 8px;
-  align-self: flex-end;
-  background-color: #b2b2b2;
-}
 .messenger__input {
   border: 1px solid black;
   max-height: 3rem;
@@ -152,6 +135,13 @@ button {
 .messenger__text {
   flex: 0 0 auto;
   font-size: 1rem;
+}
+
+html.dark .dialog._active {
+  background-color: #333333;
+}
+html.dark .dialog:hover {
+  background-color: #333333;
 }
 
 /*# sourceMappingURL=Messenger.css.map */

@@ -108,3 +108,9 @@
     }
   }
 }
+
+html.dark {
+  & .user__button:hover {
+    background-color: #333333;
+  }
+}

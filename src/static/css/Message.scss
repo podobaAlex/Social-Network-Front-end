@@ -1,0 +1,39 @@
+.message {
+  flex: 0 0 auto;
+  max-width: 40%;
+  word-break: break-word;
+  background-color: #dadada;
+  align-self: flex-start;
+  padding: 5px;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &._client {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 8px;
+    align-self: flex-end;
+    background-color: #b2b2b2;
+  }
+}
+
+html.dark {
+  & .message {
+    background-color: #333333;
+
+    &._client {
+      background-color: #454545;
+    }
+  }
+}

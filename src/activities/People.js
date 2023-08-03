@@ -3,7 +3,7 @@ import User from '../components/User'
 import React from 'react';
 
 const People = () => {
-    const [now, setNow] = React.useState(null)
+    const [now, setNow] = React.useState(null);
     const usersRef = React.useRef(null);
 
     function getUsers() {
