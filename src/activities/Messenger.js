@@ -1,19 +1,23 @@
 import '../static/css/Messenger.css'
-import profile from '../static/img/profile.svg'
+import Dialog from '../components/Dialog'
 import React, {useEffect} from 'react';
 import Message from '../components/Message'
 
 const Messenger = () => {
     useEffect(getDialogs, [])
 
-    const [now, setNow] = React.useState(null);
+    const [dialogNow, setDialogNow] = React.useState(null);
+    const dialogRef = React.useRef(null);
+
+    const [messageNow, setMessageNow] = React.useState(null);
     const messagesRef = React.useRef(null);
 
     let dialog = document.querySelector('.dialog._active')
-    let dialogList = document.querySelector('.dialog__list')
+    let dialogs = document.querySelector('.dialog__list')
     let wrapper = document.querySelector('.wrapper')
 
     let messageList = ''
+    let dialogList = ''
 
     function openDialogue() {
         console.log(dialog.dataset.id)
@@ -23,22 +27,19 @@ const Messenger = () => {
         for (let i = 0; i < 20; i++) {
             messageContainer.push(Message(i, `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet aperiam atque, cumque, deleniti dignissimos eius error esse exercitationem facere illum in incidunt, ipsum iusto modi obcaecati officia quibusdam quo tenetur.`, (i % 2 === 0)))
         }
-        messagesRef.current = setNow(messageContainer)
+        messagesRef.current = setMessageNow(messageContainer)
     }
 
     function getDialogs() {
         wrapper = document.querySelector('.wrapper')
-        dialogList = document.querySelector('.dialog__list');
+        dialogs = document.querySelector('.dialog__list');
+
+        let dialogContainer = []
+
         for (let i = 0; i < 15; i++) {
-            dialogList.innerHTML += `
-            <div class="dialog" data-id="${i}">
-                <div class="dialog__image">
-                    <img src="${profile}" alt="">
-                </div>
-                <div class="dialog__name">Dialog</div>
-            </div>
-            `
+            dialogContainer.push(Dialog(i, '', 'Dialog'))
         }
+        dialogRef.current = setDialogNow(dialogContainer)
     }
 
     const showDialogue = (e) => {
@@ -54,30 +55,30 @@ const Messenger = () => {
     function closeDialogue() {
         dialog.classList.remove('_active')
         wrapper.classList.remove('_active')
-        messagesRef.current = setNow('')
+        messagesRef.current = setMessageNow('')
         dialog = null;
     }
 
-    if (now != null) {
-        messageList = now;
+    if (messageNow != null) {
+        messageList = messageNow;
+    }
+
+    if (dialogNow != null) {
+        dialogList = dialogNow;
     }
 
     return (<div className="wrapper">
         <div className="container container_messenger">
             <div className="dialogs">
                 <div className="dialog__search" contentEditable="true"></div>
-                <div className="dialog__list" onClick={showDialogue}>
-
-                </div>
+                <div className="dialog__list" onClick={showDialogue}>{dialogList}</div>
             </div>
             <div className="messenger">
                 <div className="messenger__name" hidden>
                     <button className="button button_close" onClick={closeDialogue}>X</button>
                     <span className="messenger__text">Text</span>
                 </div>
-                <div className="messenger__block" hidden>
-                    {messageList}
-                </div>
+                <div className="messenger__block" hidden>{messageList}</div>
                 <div className="messenger__input" contentEditable="true" hidden></div>
             </div>
         </div>
