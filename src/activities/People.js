@@ -21,11 +21,29 @@ const People = () => {
 
     React.useEffect(getUsers, [])
 
+    const userAction = (e) => {
+        if (e.target.closest('.user__action')) {
+            if (e.target.closest('.user__button_add')) {
+                addFriend()
+            } else if (e.target.closest('.user__button_message')) {
+                sendMessage()
+            }
+        }
+    }
+
+    const addFriend = () => {
+        console.log('add friend')
+    }
+
+    const sendMessage = () => {
+        console.log('send message')
+    }
+
     return (
         <div className="wrapper">
             <div className="container container_people">
                 <div className="users__search" contentEditable></div>
-                <div className="users">
+                <div className="users" onClick={userAction}>
                     {userList}
                 </div>
             </div>

@@ -68,6 +68,10 @@ const Messenger = () => {
         dialogList = dialogNow;
     }
 
+    const sendMessage = () => {
+        console.log('Sending message');
+    }
+
     return (<div className="wrapper">
         <div className="container container_messenger">
             <div className="dialogs">
@@ -80,7 +84,7 @@ const Messenger = () => {
                     <span className="messenger__text">Text</span>
                 </div>
                 <div className="messenger__block" hidden>{messageList}</div>
-                <InputMessage/>
+                <InputMessage onClick={sendMessage}/>
             </div>
         </div>
     </div>)

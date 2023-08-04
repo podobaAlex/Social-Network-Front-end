@@ -97,8 +97,6 @@ M
 src/static/css/Dialog.css.map,f\e\fe35652a45ce2733316b0c816e1c5efd2a547bec
 A
 public/robots.txt,d\a\dac799070c2d0c2fa24462b02c1f2dcc3fb3a1e9
-J
-src/static/css/Dialog.scss,9\7\977d9e1ad6a2e4970df4ed5ac69aab0beda72cd3
 G
 src/static/css/Main.css,5\0\50764a77dc6623e8ed85044faf1f81d59609bead
 H
@@ -109,10 +107,6 @@ I
 src/static/img/people.svg,9\f\9f60ce3506a753a26ccbcbf348442bafabf2b080
 M
 src/static/img/add-friend.svg,0\e\0e33d5b379d71ae922df5c50052e4237597ab3cd
-O
-src/static/css/InputMessage.css,f\8\f85c5dbf98cc8ba55e6f14c65584efe73cb830d9
-S
-#src/static/css/InputMessage.css.map,0\4\044058d2767027ec71fec68a6243fa96a73d6e46
 F
 src/static/css/App.css,d\6\d6f8001eb39e8b309648d02e30cf790649232e7f
 L
@@ -123,3 +117,9 @@ J
 src/static/css/App.css.map,2\c\2cf95c790f75b4e5c3032baa6534551d63e7375e
 G
 src/static/img/send.svg,c\d\cdf08fab4c15728a6a91ea8eb0d11bf2a6dfac1d
+G
+src/static/css/App.scss,3\f\3fdc1efe906572dc5e6cbfa05f135ba0f497e20b
+H
+src/static/css/index.css,2\3\235244ed80bcc0857626cb51ba0e58dd64f8e483
+L
+src/components/Navigation.js,4\7\477c0ac3ad82c64b1d06eb12dcfe57afadba642b
