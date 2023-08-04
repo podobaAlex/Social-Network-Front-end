@@ -19,7 +19,7 @@ const People = () => {
         userList = now;
     }
 
-    React.useEffect(getUsers)
+    React.useEffect(getUsers, [])
 
     return (
         <div className="wrapper">

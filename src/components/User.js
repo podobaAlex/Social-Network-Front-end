@@ -6,7 +6,7 @@ import {HandySvg} from "handy-svg";
 import "../static/css/User.css"
 
 const User = (id, userImage, username) => (
-    <div className="user" data-id={id}>
+    <div className="user" key={id} data-id={id}>
         <div className="user__info">
             <div className="user__image">
                 <HandySvg src={profile} className="icon"/>

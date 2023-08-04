@@ -5,7 +5,7 @@ import '../static/css/Dialog.css'
 
 const Dialog = (id, dialogImg, dialogName) => {
     return (
-        <div className="dialog" key={id}>
+        <div className="dialog" key={id} data-id={id}>
             <div className="dialog__image">
                 <HandySvg src={profile} className="icon"/>
                 <img data-src={dialogImg} src={pixel} alt=""/>

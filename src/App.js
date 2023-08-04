@@ -5,6 +5,7 @@ import Main from './activities/Main'
 import Messenger from './activities/Messenger'
 import People from './activities/People'
 import changeTheme from "./functions/ChangeTheme";
+import {Link} from "react-router-dom";
 
 const App = () => {
     const saveUserTheme = localStorage.getItem('user-theme')
